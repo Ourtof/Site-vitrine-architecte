@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8"> <!-- pour les caractères spéciaux -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge"> <!-- Pour que le code ressemble à qqch sur IE/Edge -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1"> <!-- Toujours adapter à la largeur de l'appareil, mise à l'échelle -->
+    <meta name="referrer" content="origin-when-cross-origin"> <!-- Autorise l'interrogation asynchrone uniquement sur lui même -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Bibliothèque obligatoire pour Apple -->
+    <meta name="msapplication-tap-highlight" content="no" /> <!-- Désactive le taplight pour les mobiles (truc bleu quand on clique) -->
+    <meta name="description" content="Panthéon grec"> <!-- Description sur google pour le référencement -->
+    <title>FINISH HIM le CSS</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image favicon/png" href="media/images/favicon.ico"/>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#top">HOME</a></li>
+            <li><a href="#screen2">Cities Building</a></li>
+            <li><a href="#screen3">Contact</a></li>
+            <li><a href="#screen4">Social Network</a></li>
+        </ul>
+    </nav>
+
+    <header class="flex-end">
+        <div class="cadre">
+            <h1><span>C & O</span><br>Architects</h1>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="screen2" class="prefab-screen">
+
+            <div class="text-building">
+                <h2>Cities Building</h2>
+            </div>
+
+            <div class="rotate">
+                <div class="parent">
+                    <div class="div1 pos prefab-grid">
+                        <div>
+                            <p>Living</p>
+                        </div>     
+                    </div>
+                    <div class="div2 pos prefab-grid">
+                        <div>
+                            <p>Paris</p>
+                        </div> 
+                    </div>
+                    <div class="div3 pos prefab-grid">
+                        <div>
+                            <p>Work</p>
+                        </div> 
+                    </div>
+                    <div class="div4 pos prefab-grid">
+                        <div>
+                            <p>Sydney</p>
+                        </div> 
+                    </div>
+                    <div class="div5 pos prefab-grid">
+                        <div>
+                            <p>Building Style</p>
+                        </div> 
+                    </div>
+                    <div class="div6 pos prefab-grid">
+                        <div>
+                            <p>Dubaï</p>
+                        </div> 
+                    </div>
+                    <div class="div7 pos prefab-grid">
+                        <div>
+                            <p>New York</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="screen3" class="prefab-screen">
+
+            <div class="flex">
+                <h3>Contact Us</h3>
+                <form>
+                    <div id="input-name">
+                        <label for="name">Enter your name</label>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div id="input-firstname">
+                        <label for="name"> Enter your firstname</label>
+                        <input type="text" placeholder="Firstname"> 
+                    </div>
+                    <div id="input-mail">
+                        <label for="email">Enter your mail</label>
+                        <input type="email" placeholder="Mail@gmail.com">
+                    </div>
+                    <div id="area">
+                        <label for="text-area">What can we do together ?</label>
+                        <textarea type="text-area" name="area" placeholder="Enter your message"></textarea>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+        <section id="screen4" class="flex prefab-screen">
+ 
+                
+                    <iframe src="https://www.youtube.com/embed/vmHoGicPQQQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="social-media flex-end">
+                    <p>Follow us here :</p>
+                    <div id="fb">
+                        <img src="media/image/fbBlanc.png">
+                    </div>
+                    <div id="twitt">
+                        <img src="media/image/twitter.png">
+                    </div>
+                    <div id="insta">
+                        <img src="media/image/insta.png">
+                    </div>
+                </div>
+
+
+
+        </section>
+
+
+    </main>
+
+
+</body>

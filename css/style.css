@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Tahoma, 'Geneva', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/***************UTILITAIRES**************/
+
+:root {
+    --color-text:white;
+    --bg-transp: rgba(0, 0, 0, 0.5);
+    --font-text: 'Raleway';
+}
+
+@font-face {
+    font-family: var(--font-text);
+    src: url("../font/Raleway-VariableFont_wght.ttf");
+}
+
+li, h1, h2, p, h3 {
+    font-family: var(--font-text);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: unset;
+}
+
+h2, p, h3, label {
+    color: var(--color-text);
+}
+
+label, .social-media p {
+    font-size: 1.4rem;
+}
+
+.parent, input, #area textarea {
+    width: 100%;
+    height: 100%;
+}
+
+#input-name label, #input-mail, #area, #area label {
+    width: 100%;
+}
+
+/***************PREFAB**************/
+
+.prefab-screen {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.prefab-grid {
+    border-radius: 10%;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/***************STEP 1**************/
+
+header {
+    background-image: url("../media/image/building.jpeg");
+    background-blend-mode: difference;
+    background-color: hsla(150, 1%, 10%, 1);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+}
+
+/***************NAV**************/
+
+nav {
+    clip-path: polygon(0 0, 60% 0%, 100% 50%, 50% 100%, 0% 100%);
+    backdrop-filter: blur(2rem);
+    background-color: rgba(100%, 100%, 100%, 0.2);
+    z-index: 1;
+    height: 100vh;
+    position: fixed;
+    padding: 60px;
+    text-align: center;
+}
+
+ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+li {
+    font-size: 1rem;
+    padding: 15px 50px;
+    margin: 10% 5%;
+    border: solid 1px var(--color-text);
+    list-style: none;
+}
+
+li:hover {
+    background-color: hsla(150, 100%, 100%, 0.5);
+    transition: background-color 1s;
+}
+
+li:hover a {
+    color: var(--color-text);
+}
+
+h1 {
+    border: solid 2px var(--color-text);
+    padding: 30px 100px;
+    font-size: 3.5em;
+}
+
+.cadre {
+    text-align: center;
+    color: var(--color-text);
+    margin: 3%;
+}
+
+.cadre span, .text-building, h3 {
+    font-size: 2em;
+}
+
+
+/***************STEP 2**************/
+
+#screen2 {
+    background-image: url("../media/image/building2.jpg");
+    background-blend-mode: difference;
+    background-color: hsla(150, 1%, 10%, 1);
+    position: relative;
+}
+
+.text-building {
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+}
+
+.rotate {
+    perspective: 800px;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.parent {                                                   /*Grid pictures*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr repeat(2, 75px) 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    transform:rotateY(-20deg);
+}
+    
+.div1 { 
+    grid-area: 1 / 1 / 3 / 2;
+    background-image: url("../media/image/building9.jpg");
+}
+
+.div2 { 
+    grid-area: 3 / 1 / 5 / 2;
+    background-image: url("../media/image/building7.jpg");
+}
+
+.div3 { 
+    grid-area: 1 / 2 / 2 / 3;
+    background-image: url("../media/image/building10.jpg");
+}
+
+.div4 { 
+    grid-area: 1 / 3 / 2 / 4;
+    background-image: url("../media/image/building6.jpg");
+}
+
+.div5 { 
+    grid-area: 2 / 2 / 5 / 4;
+    background-image: url("../media/image/building5.jpg");
+}
+
+.div6 { 
+    grid-area: 1 / 4 / 3 / 5;
+    background-image: url("../media/image/building8.jpg");
+}
+
+.div7 { 
+    grid-area: 3 / 4 / 5 / 5;
+    background-image: url("../media/image/building11.jpg");
+}
+
+.div1:hover, .div2:hover, .div3:hover, .div4:hover, .div5:hover, .div6:hover, .div7:hover {
+    transform: scale(1.1);
+    background-color: grey;
+    background-blend-mode: multiply;
+    transition: transform .2s;
+}
+
+.pos {
+    text-align: center;
+    transition: all 0.8s;
+    font-size: 2.5rem;
+}
+
+.pos p {
+    position: absolute;
+    left: 50%;
+    bottom: -100px;
+    transform: translate(-50%, 50%);
+    transition: all 0.8s;
+}
+
+.pos:hover p {
+    bottom: 50%;
+}
+
+
+/***************STEP 3**************/
+
+#screen3 {
+    background-image: url("../media/image/building3.jpg");
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#screen3 .flex {
+    margin-right: 50px;
+}
+
+h3 {
+    margin-top: 200px;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 2%;
+}
+
+/***************INPUT**************/
+
+::placeholder, input, textarea {
+    color: var(--color-text);
+    font-size: 2rem;
+}
+
+input, #area textarea, label {
+    font-family: var(--font-text);
+}
+
+#input-name, #input-firstname {
+    width: 47%;
+}
+
+input {
+    padding: 0 10px;
+    background-color:var(--bg-transp);
+    border-bottom: solid 1px var(--color-text);
+}
+
+#input-mail, #area {
+    margin-top: 4%;
+}
+
+#area textarea {
+    padding: 10px 10px;
+    background-color:var(--bg-transp);
+    border-bottom: solid 1px var(--color-text);
+}
+
+/***************STEP 4**************/
+
+#screen4 {
+    background-image: url("../media/image/building4.jpg");
+    background-color: hsl(14, 96%, 74%);
+    background-blend-mode: screen;
+}
+
+iframe {
+    margin: 10% 5% 0 0;
+    width: 40%;
+    height: 40%;
+}
+
+
+/***************social media**************/
+
+.social-media {
+    margin: 5% 5% 0 0;
+    gap: 20px;
+}
+
+.social-media p {
+    margin-right: 4%;
+    padding-top: 3.5%;
+}
+
+#fb, #twitt, #insta {
+    width: 5%;
+}
